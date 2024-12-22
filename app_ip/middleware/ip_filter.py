@@ -27,7 +27,7 @@ class RateLimitMiddleware(MiddlewareMixin):
     - Allows up to 100 requests per IP in a rolling 5-minute window.
     - Returns HTTP 429 (Too Many Requests) if the limit is exceeded.
     """
-    RATE_LIMIT = 100  # max requests
+    RATE_LIMIT = 5  # max requests
     WINDOW_SIZE = 300  # 5 minutes in seconds
 
     def process_request(self, request):
