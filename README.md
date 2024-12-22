@@ -20,16 +20,32 @@ app_ip/middleware/ip_filter.py - [Link](app_ip/middleware/ip_filter.py)
     pip install django-redis
     ```
 2. Configure Redis in `settings.py`:
-    - Add the cache configuration as shown above.
+   ```python
+        CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://127.0.0.1:6379/1',
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+        }
+    }
+    }
+    ```
+    - Add the cache configuration as shown .
     - Make sure you have a Redis server running on `localhost` (port 6379).
-3. Add the middleware in `settings.py`:
+4. Add the middleware in `settings.py`:
     ```python
     MIDDLEWARE = [
         # Other middleware
         'your_project.middleware.RateLimitMiddleware',
     ]
     ```
-4. Test the middleware by sending requests by jmeter and RateLimitingMiddlewareTests
+5. Test the middleware by sending requests by jmeter and RateLimitingMiddlewareTests
 
 log response if rate limit is 5
 ![Image Alt Text](test.png)
+
+
+jmeter resposne for 100 rate limit
+
+
