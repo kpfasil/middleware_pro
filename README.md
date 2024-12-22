@@ -7,7 +7,7 @@
 This middleware implements rate-limiting for each IP address based on a rolling 5-minute window. The system tracks the number of requests from an IP and blocks further requests once the IP exceeds 100 requests within the window. The rolling window ensures that only requests within the last 5 minutes are counted.
 
 ### How it Works:
-app_ip/middleware/ip_filter.py - middleware file path
+app_ip/middleware/ip_filter.py - [Link](app_ip/middleware/ip_filter.py)
 1. The middleware identifies the client's IP from the request headers.
 2. Timestamps of the requests are stored in a cache (Redis/Django Cache).
 3. The middleware checks if the number of requests within the last 5 minutes exceeds 100. If so, it responds with a `429 Too Many Requests` status.
