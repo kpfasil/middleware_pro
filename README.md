@@ -31,4 +31,4 @@ This middleware implements rate-limiting for each IP address based on a rolling 
 4. Test the middleware by sending requests by jmeter and RateLimitingMiddlewareTests
 
 log response if rate limit is 5
-![Image Alt Text](middleware_pro\app_ip\Screenshot 2024-12-23 031459.png)
+![Image Alt Text](middleware_pro\test.png)
