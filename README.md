@@ -2,7 +2,7 @@ Custom Middleware for Request Rate Limiting
 
 
 Overview
-This project contains a custom Django middleware designed to implement request rate limiting based on IP addresses. The middleware limits requests to a maximum of 100 requests per 5-minute rolling window for each IP. Requests exceeding this limit receive an HTTP 429 (Too Many Requests) status code.
+This project contains a custom Django middleware designed to implement request rate limiting based on IP addresses. The middleware limits requests to a maximum of 100 requests per 5-minute rolling window for each IP.
 
 Features
 -Tracks and limits requests by IP address.
